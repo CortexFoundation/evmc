@@ -175,7 +175,11 @@ enum evmc_opcode
 
     OP_REVERT = 0xfd,
     OP_INVALID = 0xfe,
-    OP_SELFDESTRUCT = 0xff
+    OP_SELFDESTRUCT = 0xff,
+
+      // new OPs used for AI Inference
+    OP_INFER = 0xb0,
+    OP_INFERARRAY = 0xb1,
 };
 
 /**

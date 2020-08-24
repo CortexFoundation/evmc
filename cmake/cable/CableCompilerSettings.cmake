@@ -46,6 +46,7 @@ endfunction()
 
 # Configures the compiler with default flags.
 macro(cable_configure_compiler)
+  message("m,,,,,,,")
     if(NOT PROJECT_SOURCE_DIR)
         message(FATAL_ERROR "cable_configure_compiler() must be used after project()")
     endif()
@@ -53,7 +54,9 @@ macro(cable_configure_compiler)
     # Determine if this is the main or a subproject. Leave this variable available for later use.
     if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
         set(PROJECT_IS_MAIN TRUE)
+      message("project is main true...")
     else()
+      message("project is main false...")
         set(PROJECT_IS_MAIN FALSE)
     endif()
 
@@ -76,6 +79,7 @@ macro(cable_configure_compiler)
 
         if(CABLE_COMPILER_GNU OR CABLE_COMPILER_CLANG)
             set(CABLE_COMPILER_GNULIKE TRUE)
+            message("gnu like..")
         endif()
 
         if(CABLE_COMPILER_GNULIKE)
