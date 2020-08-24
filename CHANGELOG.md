@@ -5,6 +5,22 @@ Documentation of all notable changes to the **EVMC** project.
 The format is based on [Keep a Changelog],
 and this project adheres to [Semantic Versioning].
 
+## [7.4.0] — 2020-06-24
+
+### Changed
+
+- The C++ standard required increased to **C++14**.
+  [#521](https://github.com/ethereum/evmc/pull/521)
+- The C++ literals for `address` and `bytes32` types have been reimplemented to
+  use `static_assert` to report errors. This makes C++ bindings exception-free
+  (_no-throw guarantee_ level of exception safety).
+  [#520](https://github.com/ethereum/evmc/pull/520)
+
+### Removed
+
+- The support for **Visual Studio 2015** C/C++ compiler has been dropped 
+  as a consequence of requiring C++14.
+  [#521](https://github.com/ethereum/evmc/pull/521)
 
 ## [7.3.0] — 2020-05-20
 
@@ -472,6 +488,7 @@ removed.
   [#52](https://github.com/ethereum/evmc/pull/52)
 
 
+[7.4.0]: https://github.com/ethereum/evmc/releases/tag/v7.4.0
 [7.3.0]: https://github.com/ethereum/evmc/releases/tag/v7.3.0
 [7.2.0]: https://github.com/ethereum/evmc/releases/tag/v7.2.0
 [7.1.0]: https://github.com/ethereum/evmc/releases/tag/v7.1.0
