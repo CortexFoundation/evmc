@@ -295,6 +295,12 @@ enum evmc_status_code
      */
     EVMC_WASM_TRAP = 16,
 
+
+    /**
+     */
+    EVMC_META_SHAPE_MISMATCH = 17,
+
+
     /** EVM implementation generic internal error. */
     EVMC_INTERNAL_ERROR = -1,
 
